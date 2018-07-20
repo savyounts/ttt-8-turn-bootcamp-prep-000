@@ -19,7 +19,7 @@ end
   !(board[index] == "" || board[index] == " " || board[index] == nil)
  end 
   
-def move(board, index, player="X")
+def move(board, index, player)
   board[index] = player
 end  
 
@@ -28,7 +28,7 @@ def turn(board)
   x = gets.strip
   index = input_to_index(x)
   if valid_move?(board, index)
-    move(board, index, player="X")
+    move(board, index, player)
   else
     turn(board)
   end
